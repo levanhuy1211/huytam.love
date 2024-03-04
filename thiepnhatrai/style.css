@@ -1,4 +1,4 @@
-@media phone and (max-width: 300px){
+@media (max-width: 300px){
 * {
     margin: 0;
   }
