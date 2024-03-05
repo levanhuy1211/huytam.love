@@ -167,7 +167,7 @@
     }
     .card-time { 
       text-align: center;
-      padding-top: 156px;
+      padding-top: 157px;
       margin-left: -25px;
       font-size: 8px;
       font-style: oblique;
@@ -181,7 +181,7 @@
       font-style: oblique;
       color: blue;
       font-family: cursive;
-      margin-top: -9px;
+      margin-top: -8px;
     }  
   }
   @media only screen and (min-width: 500px){
