@@ -55,9 +55,8 @@
   
   .card .open-tail {
     position: relative;
-    height: 36px;
-    width: 30px;
     float: left;
+    display: none;
   }
   
   .card .open-tail:before {
@@ -82,9 +81,10 @@
   
   .card .open-main {
     display: inline-block;
-    line-height: 36px;
-    background: #d24242;
+    line-height: 20px;
+    background: #d83c3c;
     padding: 0 3px 0 0;
+    height: 20px;
   }
   
   .card .open-title {
