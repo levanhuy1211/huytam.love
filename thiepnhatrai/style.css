@@ -157,6 +157,32 @@
       top: 10px;
       right: 10px;
     }
+    .card-name {
+      text-align: center;
+      padding-top: 205%;
+      font-family: cursive;
+      font-style: italic;
+      color: blue;
+      font-size: 8px;
+    }
+    .card-time { 
+      text-align: center;
+      padding-top: 156px;
+      margin-left: -25px;
+      font-size: 8px;
+      font-style: oblique;
+      color: blue;
+      font-family: cursive;
+    }
+    .card-time-minute{
+      text-align: center;
+      margin-left: 28px;
+      font-size: 8px;
+      font-style: oblique;
+      color: blue;
+      font-family: cursive;
+      margin-top: -11px;
+    }  
   }
   @media only screen and (min-width: 500px){
     * {
@@ -316,4 +342,30 @@
         top: 10px;
         right: 10px;
       }
+      .card-name {
+        text-align: center;
+        padding-top: 152%;
+        font-family: cursive;
+        font-style: italic;
+        font-size: 19px;
+        color: blue;
+      }
+      .card-time {
+        text-align: center;
+        padding-top: 371px;
+        margin-left: -57px;
+        font-size: 18px;
+        font-style: oblique;
+        color: blue;
+        font-family: cursive;
+      }
+      .card-time-minute{
+        text-align: center;
+        margin-left: 60px;
+        font-size: 18px;
+        font-style: oblique;
+        color: blue;
+        font-family: cursive;
+        margin-top: -25px;
+      }  
     }
