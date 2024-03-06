@@ -57,14 +57,15 @@
     .card .open-tail {
       position: relative;
       float: left;
-      display: none;
+      width: 10px;
+      height: 10px;
     }
     
     .card .open-tail:before {
       content: '';
       display: block;
-      border-top: 18px solid #d24242;
-      border-left: 30px solid transparent;
+      border-top: 10px solid #d24242;
+      border-left: 10px solid transparent;
       position: absolute;
       left: 0;
       top: 0;
@@ -74,10 +75,10 @@
       content: '';
       display: block;
       position: absolute;
-      top: 18px;
+      top: 10px;
       left: 0;
-      border-top: 18px solid transparent;
-      border-right: 30px solid #d24242;
+      border-top: 10px solid transparent;
+      border-right: 10px solid #d24242;
     }
     
     .card .open-main {
