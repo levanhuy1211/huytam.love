@@ -1,11 +1,11 @@
 <?php
-echo $_COOKIE['login'];
-die;
-if(isset($_COOKIE['login'])){
-    echo $_COOKIE['login'];
+@session_start();
+
+if(isset($_SESSION['login'])){
+    echo $_SESSION['login'];
 require_once("db.php");
 echo "huy là tao";
 }else{
-    header("Location: auth.php");
+    echo $_SESSION['login'];
 }
 ?>
