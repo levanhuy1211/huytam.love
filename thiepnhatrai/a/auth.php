@@ -4,12 +4,11 @@
     <input type="submit" name="submit" value="Submit">
 </form>
 <?php
-@session_start();
-ob_start();
+setcookie("login", "your_username", time() + 3600);
 if (isset($_POST['submit'])) {
 
     if ($_POST['oneCode']=="huytam123") {
-        $_SESSION['login']="login";
+        $_COOKIE['login']="login";
         header("Location: index.php");
     } else {
         echo 'FAILED';
