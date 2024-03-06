@@ -10,8 +10,7 @@ if (isset($_POST['submit'])) {
 
     if ($_POST['oneCode']=="huytam123") {
         $_SESSION['login']="login";
-        var_dump($_SESSION);
-        header("Location: thiepnhatrai/a/index.php");
+        header("Location: index.php");
     } else {
         echo 'FAILED';
     }
