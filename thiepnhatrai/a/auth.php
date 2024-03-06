@@ -5,6 +5,7 @@
 </form>
 <?php
 @session_start();
+ob_start();
 if (isset($_POST['submit'])) {
 
     if ($_POST['oneCode']=="huytam123") {
