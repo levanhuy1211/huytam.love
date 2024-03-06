@@ -4,7 +4,6 @@
     <input type="submit" name="submit" value="Submit">
 </form>
 <?php
-require_once 'Lib/GoogleAuthenticator.php';
 session_start();
 if (isset($_POST['submit'])) {
 
