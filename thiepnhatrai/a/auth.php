@@ -10,7 +10,10 @@ ini_set('display_errors', 1);
 if (isset($_POST['submit'])) {
     if ($_POST['oneCode']=="huytam123") {
         $_SESSION['login']="login";
-        header("Location: index.php");
+        // Thiết lập header HTTP cho chuyển hướng
+        header('Location: /index.php', true, 302);
+        exit; // Đảm bảo rằng script dừng lại sau khi chuyển hướng
+
     } else {
         echo 'FAILED';
     }
