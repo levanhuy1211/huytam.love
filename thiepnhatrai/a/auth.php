@@ -9,8 +9,9 @@ if (isset($_POST['submit'])) {
 
     if ($_POST['oneCode']=="huytam123") {
         $_SESSION['login']="login";
-        header("Location: admin/index.php");
+        header("Location: index.php");
     } else {
         echo 'FAILED';
     }
 }
+?>
