@@ -4,6 +4,7 @@
     <input type="submit" name="submit" value="Submit">
 </form>
 <?php
+ini_set('display_errors', 1)
 session_start();
 if (isset($_POST['submit'])) {
 
