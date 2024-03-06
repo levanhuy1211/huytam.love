@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
 
     if ($_POST['oneCode']=="huytam123") {
         $_COOKIE['login']="login";
+        echo $_COOKIE['login'];
         header("Location: index.php");
     } else {
         echo 'FAILED';
