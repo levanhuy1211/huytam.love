@@ -7,21 +7,19 @@ require_once("db.php");?>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Form và Table</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Form và Table</title>
   <script>
     function copyToClipboard(text, button) {
-      // Tạo một input ẩn để sao chép nội dung vào clipboard
       var tempInput = document.createElement("input");
       tempInput.value = text;
       document.body.appendChild(tempInput);
       tempInput.select();
       document.execCommand("copy");
       document.body.removeChild(tempInput);
-      alert("Đã sao chép liên kết vào clipboard!");
       button.classList.remove("btn-success");
     }
   </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container">
@@ -81,7 +79,7 @@ require_once("db.php");?>
     <hr>
 
     <h2>Bảng (Table)</h2>
-    <table class="table">
+    <table class="table table-hover table-striped table-bordered">
       <thead>
         <tr>
           <th>Tên</th>
@@ -98,7 +96,7 @@ require_once("db.php");?>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['time']?> giờ</td>
             <td>
-              <a href="<?php echo $link ?>"><?php echo $link ?></a> <button class="btn btn-success" onclick='copyToClipboard("<?php echo $link;?>")'>Copy</button>
+              <a href="<?php echo $link ?>"><?php echo $link ?></a> <button class="btn btn-success" onclick='copyToClipboard("<?php echo $link;?>")'>Copy link</button>
           </td>
         </tr>
     <?php }?>
@@ -106,7 +104,7 @@ require_once("db.php");?>
       </tbody>
     </table>
   </div>
-
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
