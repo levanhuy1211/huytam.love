@@ -16,7 +16,7 @@ require_once("db.php");?>
     <form method="post">
       <div class="form-group">
         <label for="name">Tên:</label>
-        <input type="text" class="form-control" id="name" placeholder="Nhập tên người được mời">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên người được mời">
       </div>
       <div class="form-group">
         <label for="time">Thời gian:</label>
@@ -29,11 +29,37 @@ require_once("db.php");?>
           <label class="form-check-label" for="time2">16:00</label>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Tạo thiệp</button>
+      <button type="submit" name="submit" class="btn btn-primary">Tạo thiệp</button>
     </form>
     <?php 
-        var_dump($_POST);
+        if(isset($_POST['submit'])){
+            $name=$_POST['name'];
+            $time= $_POST['time'];
+            $characters = array_merge(range('a', 'z'), range(1, 9));
+
+            // Tạo chuỗi ngẫu nhiên từ mảng
+            $random = '';
+            for ($i = 0; $i < 20; $i++) {
+                $random .= $characters[array_rand($characters)];
+            }
+            $sql = "INSERT INTO nhatrai (name, time, random) VALUES (:name, :time, :random)";
     
+            // Chuẩn bị câu lệnh SQL
+            $stmt = $conn->prepare($sql);
+            
+            // Bind các giá trị dữ liệu vào câu lệnh SQL
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':time', $time);
+            $stmt->bindParam(':random', $random);
+            
+            // Thực thi câu lệnh SQL
+            $stmt->execute();
+        }
+        // Chuẩn bị câu lệnh SQL SELECT
+        $sql = "SELECT name, time, random FROM nhatrai ORDER BY time DESC"; // Sắp xếp theo trường 'time' giảm dần
+    
+        // Thực thi câu lệnh SQL
+        $stmt = $conn->query($sql);    
     ?>
     <hr>
 
@@ -47,11 +73,14 @@ require_once("db.php");?>
         </tr>
       </thead>
       <tbody>
+    <?php 
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {?>
         <tr>
-          <td>John</td>
-          <td>2024-03-07 12:00</td>
-          <td>123</td>
+            <td><?php echo $row['name']?></td>
+            <td><?php echo $row['time']?></td>
+            <td><?php echo "https://https://huytam.love/thiepnhatrai?code=".$row['random']?></td>
         </tr>
+    <?php }?>
         <!-- Các hàng của bảng sẽ được thêm vào đây bằng JavaScript hoặc server-side scripting -->
       </tbody>
     </table>
