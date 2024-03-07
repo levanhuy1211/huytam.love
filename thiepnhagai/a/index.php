@@ -106,7 +106,6 @@ require_once("db.php");?>
       tempInput.select();
       document.execCommand("copy");
       document.body.removeChild(tempInput);
-      alert("Đã sao chép liên kết vào clipboard!");
     }
   </script>
 </body>
