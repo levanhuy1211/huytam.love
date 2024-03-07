@@ -85,7 +85,7 @@ require_once("db.php");?>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['time']?> giờ</td>
             <td>
-              <?php echo $link ?> <button onclick='copyToClipboard("<?php echo $link;?>")'>Copy</button>
+              <a href="<?php echo $link ?>"><?php echo $link ?></a> <button class="button button-success" onclick='copyToClipboard("<?php echo $link;?>")'>Copy</button>
           </td>
         </tr>
     <?php }?>
