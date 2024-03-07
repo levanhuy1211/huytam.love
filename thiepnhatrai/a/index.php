@@ -82,7 +82,10 @@ require_once("db.php");?>
         <tr>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['time']?> giờ</td>
-            <td><?php echo "https://huytam.love/thiepnhatrai/?code=".$row['random']?></td>
+            <td>
+              <a href="<?php echo $link ?>" target="_blank" ><?php echo $link ?></a> 
+              <button class="btn btn-success" onclick='copyToClipboard("<?php echo $link;?>", this)'>Copy link</button>
+            </td>
         </tr>
     <?php }?>
         <!-- Các hàng của bảng sẽ được thêm vào đây bằng JavaScript hoặc server-side scripting -->
@@ -93,6 +96,18 @@ require_once("db.php");?>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function copyToClipboard(text, button) {
+      var tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      button.classList.remove("btn-success");
+      button.textContent = "Đã copy";
+    }
+  </script>
 </body>
 </html>
 
