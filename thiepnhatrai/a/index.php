@@ -28,6 +28,10 @@ require_once("db.php");?>
           <input type="radio" class="form-check-input" name="time" id="time2" value="16" checked>
           <label class="form-check-label" for="time2">16:00</label>
         </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="time" id="time3" value="17" checked>
+          <label class="form-check-label" for="time3">17:00</label>
+        </div>
       </div>
       <button type="submit" name="submit" class="btn btn-primary">Tạo thiệp</button>
     </form>
@@ -56,7 +60,7 @@ require_once("db.php");?>
             $stmt->execute();
         }
         // Chuẩn bị câu lệnh SQL SELECT
-        $sql = "SELECT name, time, random FROM nhatrai ORDER BY time DESC"; // Sắp xếp theo trường 'time' giảm dần
+        $sql = "SELECT   name, time, random FROM nhatrai ORDER BY time DESC"; // Sắp xếp theo trường 'time' giảm dần
     
         // Thực thi câu lệnh SQL
         $stmt = $conn->query($sql);    
@@ -77,8 +81,8 @@ require_once("db.php");?>
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {?>
         <tr>
             <td><?php echo $row['name']?></td>
-            <td><?php echo $row['time']?></td>
-            <td><?php echo "https://https://huytam.love/thiepnhatrai?code=".$row['random']?></td>
+            <td><?php echo $row['time']?> giờ</td>
+            <td><?php echo "https://huytam.love/thiepnhatrai?code=".$row['random']?></td>
         </tr>
     <?php }?>
         <!-- Các hàng của bảng sẽ được thêm vào đây bằng JavaScript hoặc server-side scripting -->
