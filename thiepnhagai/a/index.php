@@ -17,6 +17,7 @@ require_once("db.php");?>
       document.execCommand("copy");
       document.body.removeChild(tempInput);
       button.classList.remove("btn-success");
+      button.textContent = "Đã copy";
     }
   </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -96,7 +97,8 @@ require_once("db.php");?>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['time']?> giờ</td>
             <td>
-              <a href="<?php echo $link ?>"><?php echo $link ?></a> <button class="btn btn-success" onclick='copyToClipboard("<?php echo $link;?>")'>Copy link</button>
+              <a href="<?php echo $link ?>"><?php echo $link ?></a> 
+              <button class="btn btn-success" onclick='copyToClipboard("<?php echo $link;?>", this)'>Copy link</button>
           </td>
         </tr>
     <?php }?>
