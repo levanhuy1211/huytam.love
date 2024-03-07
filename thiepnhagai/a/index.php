@@ -46,7 +46,7 @@ require_once("db.php");?>
             for ($i = 0; $i < 20; $i++) {
                 $random .= $characters[array_rand($characters)];
             }
-            $sql = "INSERT INTO nhatrai (name, time, random) VALUES (:name, :time, :random)";
+            $sql = "INSERT INTO nhagai (name, time, random) VALUES (:name, :time, :random)";
     
             // Chuẩn bị câu lệnh SQL
             $stmt = $conn->prepare($sql);
@@ -60,7 +60,7 @@ require_once("db.php");?>
             $stmt->execute();
         }
         // Chuẩn bị câu lệnh SQL SELECT
-        $sql = "SELECT   name, time, random FROM nhatrai ORDER BY time DESC"; // Sắp xếp theo trường 'time' giảm dần
+        $sql = "SELECT   name, time, random FROM nhagai ORDER BY time DESC"; // Sắp xếp theo trường 'time' giảm dần
     
         // Thực thi câu lệnh SQL
         $stmt = $conn->query($sql);    
@@ -82,7 +82,7 @@ require_once("db.php");?>
         <tr>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['time']?> giờ</td>
-            <td><?php echo "https://huytam.love/thiepnhatrai/?code=".$row['random']?></td>
+            <td><?php echo "https://huytam.love/thiepnhagai/?code=".$row['random']?></td>
         </tr>
     <?php }?>
         <!-- Các hàng của bảng sẽ được thêm vào đây bằng JavaScript hoặc server-side scripting -->

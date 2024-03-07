@@ -1,3 +1,29 @@
+<?php 
+require_once("a/db.php");
+if(isset($_GET['code'])){
+  $random=$_GET['code'];
+  $sql = "SELECT name, time, random FROM nhagai WHERE random = :random";
+    
+  // Chuẩn bị câu lệnh SQL
+  $stmt = $conn->prepare($sql);
+  
+  // Bind giá trị của biến $randomValue vào câu lệnh SQL
+  $stmt->bindParam(':random', $random);
+  
+  // Thực thi câu lệnh SQL
+  $stmt->execute();
+  
+  // Lấy kết quả trả về
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  if($result){
+    $name=ucfirst($result['name']);
+    $time=$result['time'];
+  }else{
+    $name="Thiệp chưa được tạo";
+    $time="Rỗng";
+  }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +39,7 @@
           </div>
           <div class="card--first">
             <div class="card-wrapper bg-img-base front" style="background-image: url(images/bia.jpg)">
-              <div class="card-name">Anh Huy và gia đình</div>
+              <div class="card-name"><?php echo $name;?></div>
               <a class="open" href="#">
                 <div class="open-tail"></div>
                 <div class="open-main"><span class="open-title">Open</span></div>
@@ -21,7 +47,7 @@
             </div>
             <div class="card-wrapper bg-img-base back" style="background-image: url(images/gai_1.png)">
               <div class="card-time">
-                <span class="card-time-hour">16</span>
+                <span class="card-time-hour"><?php echo $time;?></span>
                 <span class="card-time-minute">30</span>
               </div>
             </div>
