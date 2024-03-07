@@ -1,7 +1,3 @@
-<?php
-@session_start();
-if(isset($_SESSION['login']) && $_SESSION['login'] == "login"){
-require_once("db.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +9,7 @@ require_once("db.php");?>
 <body>
   <div class="container">
     <h2>Biểu mẫu (Form)</h2>
-    <form method="post">
+    <form>
       <div class="form-group">
         <label for="name">Tên:</label>
         <input type="text" class="form-control" id="name" placeholder="Nhập tên người được mời">
@@ -29,12 +25,9 @@ require_once("db.php");?>
           <label class="form-check-label" for="time2">16:00</label>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Tạo thiệp</button>
+      <button type="submit" class="btn btn-primary">Gửi</button>
     </form>
-    <?php 
-        var_dump($_POST);
-    
-    ?>
+
     <hr>
 
     <h2>Bảng (Table)</h2>
@@ -62,8 +55,3 @@ require_once("db.php");?>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-<?php }else{
-    header("Location: auth.php");
-}
-?>
