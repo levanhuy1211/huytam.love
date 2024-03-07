@@ -98,7 +98,7 @@ require_once("db.php");?>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    function copyToClipboard(text) {
+    function copyToClipboard(text, button) {
       // Tạo một input ẩn để sao chép nội dung vào clipboard
       var tempInput = document.createElement("input");
       tempInput.value = text;
@@ -106,6 +106,8 @@ require_once("db.php");?>
       tempInput.select();
       document.execCommand("copy");
       document.body.removeChild(tempInput);
+      button.classList.remove("btn-success");
+      button.classList.add("btn-secondary");
     }
   </script>
 </body>
