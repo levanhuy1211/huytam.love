@@ -106,8 +106,9 @@ require_once("db.php");?>
       tempInput.select();
       document.execCommand("copy");
       document.body.removeChild(tempInput);
-      button.classList.remove("btn-success");
-      button.classList.add("btn-secondary");
+      button.style.backgroundColor = "white";
+      button.style.color = "#495057"; // Màu chữ tương tự màu chữ mặc định của Bootstrap
+      button.style.borderColor = "#dee2e6"; // Màu viền tương tự màu viền mặc định của Bootstrap
     }
   </script>
 </body>
