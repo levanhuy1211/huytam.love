@@ -78,7 +78,9 @@ require_once("db.php");?>
       </thead>
       <tbody>
     <?php 
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {?>
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+      $link="https://huytam.love/thiepnhatrai/?code=".$row['random'];
+      ?>
         <tr>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['time']?> giờ</td>
