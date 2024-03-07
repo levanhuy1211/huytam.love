@@ -1,5 +1,5 @@
 <?php 
-require_once("../db.php");
+require_once("a/db.php");
 if(isset($_GET['code'])){
   $random=$_GET['code'];
   $sql = "SELECT name, time, random FROM nhatrai WHERE random = :random";
