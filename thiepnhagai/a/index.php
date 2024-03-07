@@ -9,6 +9,20 @@ require_once("db.php");?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Form và Table</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script>
+    function copyToClipboard(text, button) {
+      // Tạo một input ẩn để sao chép nội dung vào clipboard
+      var tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      button.style.backgroundColor = "white";
+      button.style.color = "#495057"; // Màu chữ tương tự màu chữ mặc định của Bootstrap
+      button.style.borderColor = "#dee2e6"; // Màu viền tương tự màu viền mặc định của Bootstrap
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -97,20 +111,7 @@ require_once("db.php");?>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    function copyToClipboard(text, button) {
-      // Tạo một input ẩn để sao chép nội dung vào clipboard
-      var tempInput = document.createElement("input");
-      tempInput.value = text;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      document.execCommand("copy");
-      document.body.removeChild(tempInput);
-      button.style.backgroundColor = "white";
-      button.style.color = "#495057"; // Màu chữ tương tự màu chữ mặc định của Bootstrap
-      button.style.borderColor = "#dee2e6"; // Màu viền tương tự màu viền mặc định của Bootstrap
-    }
-  </script>
+ 
 </body>
 </html>
 
