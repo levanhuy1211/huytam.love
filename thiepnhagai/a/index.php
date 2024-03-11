@@ -60,7 +60,7 @@ require_once("db.php");?>
             $stmt->execute();
         }
         // Chuẩn bị câu lệnh SQL SELECT
-        $sql = "SELECT   name, time, random FROM nhagai ORDER BY time DESC"; // Sắp xếp theo trường 'time' giảm dần
+        $sql = "SELECT   name, time, random FROM nhagai ORDER BY ID DESC";
     
         // Thực thi câu lệnh SQL
         $stmt = $conn->query($sql);    
