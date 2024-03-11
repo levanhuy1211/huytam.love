@@ -350,8 +350,8 @@
       }
       .card-time {
         text-align: center;
-        padding-top: 370px;
-        font-size: 19px;
+        padding-top: 257px;
+        font-size: 20px;
         font-style: oblique;
         color: blue;
         font-family: cursive;
@@ -362,4 +362,12 @@
       .card-time-hour{
         margin-left: 0px;
       }
+      .card-in-name {
+        text-align: center;
+        padding-top: 85px;
+        font-family: cursive;
+        font-style: italic;
+        font-size: 19px;
+        color: blue;
+    }
     }
