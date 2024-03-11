@@ -2,7 +2,7 @@
 require_once("a/db.php");
 if(isset($_GET['code'])){
   $random=$_GET['code'];
-  $sql = "SELECT name, time, random FROM nhagai WHERE random = :random order by DESC";
+  $sql = "SELECT * FROM nhagai WHERE random = :random order by ID DESC";
     
   // Chuẩn bị câu lệnh SQL
   $stmt = $conn->prepare($sql);
