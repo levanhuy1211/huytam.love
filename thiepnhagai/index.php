@@ -49,6 +49,9 @@ if(isset($_GET['code'])){
               </a>
             </div>
             <div class="card-wrapper bg-img-base back" style="background-image: url(images/gai_1.png)">
+              <div class="card-in-name">
+                <span><?php echo $name;?></span>
+              </div>
               <div class="card-time">
                 <span class="card-time-hour"><?php echo $time;?></span>
                 <span class="card-time-minute">00</span>
