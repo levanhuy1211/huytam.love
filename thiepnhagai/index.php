@@ -16,7 +16,7 @@ if(isset($_GET['code'])){
   // Lấy kết quả trả về
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
   if($result){
-    $name=ucfirst($result['name']);
+    $name=ucwords($result['name']);
     $time=$result['time'];
   }else{
     $name="Thiệp chưa được tạo";
