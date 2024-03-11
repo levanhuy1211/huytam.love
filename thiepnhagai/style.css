@@ -161,19 +161,21 @@
     }
     .card-name {
       text-align: center;
-      padding-top: 267px;
+      padding-top: 265px;
       font-family: "Dancing Script", cursive;
       font-style: italic;
       color: blue;
-      font-size: 6px;
+      font-size: 9px;
+      font-weight: 700;
     }
     .card-time {
       text-align: center;
       padding-top: 105px;
-      font-size: 6px;
+      font-size: 7px;
       font-style: italic;
       color: blue;
       font-family: "Dancing Script", cursive;
+      font-weight: 700;
     }
     .card-time-minute{
       padding-left: 18px;
@@ -183,10 +185,11 @@
     }
     .card-in-name {
       text-align: center;
-      padding-top: 25px;
+      padding-top: 26px;
       font-family: "Dancing Script", cursive;
       font-style: italic;
-      font-size: 7px;
+      font-size: 8px;
+      font-weight: 700;
       color: blue;
     }
   }
@@ -350,19 +353,21 @@
       }
       .card-name {
         text-align: center;
-        padding-top: 685px;
+        padding-top: 682px;
         font-family: "Dancing Script", cursive;
         font-style: italic;
-        font-size: 19px;
+        font-size: 25px;
         color: blue;
+        font-weight: 700;
       }
       .card-time {
         text-align: center;
-        padding-top: 257px;
+        padding-top: 260px;
         font-size: 20px;
         font-style: oblique;
         color: blue;
         font-family: "Dancing Script", cursive;
+        font-weight: 700;
       }
       .card-time-minute{
         padding-left: 36px;
@@ -372,10 +377,11 @@
       }
       .card-in-name {
         text-align: center;
-        padding-top: 85px;
+        padding-top: 86px;
         font-family: "Dancing Script", cursive;
         font-style: italic;
-        font-size: 19px;
+        font-size: 20px;
         color: blue;
+        font-weight: 700;
       }
     }
