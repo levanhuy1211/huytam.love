@@ -22,6 +22,9 @@ if(isset($_GET['code'])){
     $name="Thiệp chưa được tạo";
     $time="Rỗng";
   }
+}else{
+  $name="Thiệp chưa được tạo";
+  $time="Rỗng";
 }
 ?>
 <!DOCTYPE html>
@@ -54,6 +57,7 @@ if(isset($_GET['code'])){
           </div>
         </div>
       </div>
+      <div><iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d477185.3786586604!2d105.64305825474709!3d20.87161611600715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m3!3m2!1d21.1454898!2d105.754235!4m5!1s0x3135e98e9eccf1d9%3A0x54db7cd00942df8f!2zSMOgIE5ndXnDqm4sIFRow6FpIFBoxrDGoW5nLCBIxrBuZyBIw6AsIFRow6FpIELDrG5oLCBWaeG7h3QgTmFt!3m2!1d20.596763799999998!2d106.19125489999999!5e0!3m2!1svi!2s!4v1710167750327!5m2!1svi!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
 </body>
 <script>
