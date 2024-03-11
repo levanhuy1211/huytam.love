@@ -57,7 +57,6 @@ if(isset($_GET['code'])){
           </div>
         </div>
       </div>
-      <div><iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1860.6005306012937!2d105.75458278879735!3d21.14439534676267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d21.1454898!2d105.754235!4m5!1s0x3134ffb7fa8efd83%3A0x60990c97d02d623c!2zTmjDoCBWxINuIEjDs2EgVGjDtG4gWcOqbiBOaMOibiwgWcOqbiBOaMOibiwgVGnhu4FuIFBob25nLCBNw6ogTGluaCwgSMOgIE7hu5lp!3m2!1d21.144294!2d105.7580809!5e0!3m2!1svi!2s!4v1710167299748!5m2!1svi!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
 </body>
 <script>
