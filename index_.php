@@ -1,1 +1,0 @@
-<a href="index.html">dang phat trien v1</a>
