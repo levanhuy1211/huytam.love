@@ -197,6 +197,8 @@
         padding-top: 62px;
         font-size: 10px;
         margin-left: -50px;
+        z-index: 10000;
+        position: absolute;
     }
     .link-wedding a{
       text-decoration: none;
@@ -397,6 +399,8 @@
         padding-top: 5px;
         font-size: 22px;
         margin-left: 32%;
+        z-index: 10000;
+        position: absolute;
       }
       .link-wedding a{
         text-decoration: none;
