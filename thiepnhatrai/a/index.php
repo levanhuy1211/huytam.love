@@ -29,7 +29,7 @@ require_once("db.php");?>
           <label class="form-check-label" for="time2">16:00</label>
         </div>
         <div class="form-check">
-          <input type="radio" class="form-check-input" name="time" id="time3" value="17" checked>
+          <input type="radio" class="form-check-input" name="time" id="time3" value="17">
           <label class="form-check-label" for="time3">17:00</label>
         </div>
       </div>
