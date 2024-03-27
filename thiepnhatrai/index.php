@@ -61,9 +61,10 @@ if(isset($_GET['code'])){
               </div>
             </div>
           </div>
-          <a href="https://huytam.love">Hãy ấn vào đây để xem thêm thông tin</a>
+          
         </div>
       </div>
+      <a href="https://huytam.love">Hãy ấn vào đây để xem thêm thông tin</a>
     </div>
 </body>
 <script>
