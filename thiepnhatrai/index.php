@@ -48,7 +48,7 @@ if(isset($_GET['code'])){
               <div class="card-name"><?php echo $name;?></div>
               <a class="open" href="#">
                 <div class="open-tail"></div>
-                <div class="open-main"><span class="open-title">Open</span></div>
+                <div class="open-main"><span class="open-title">Mở Thiệp</span></div>
               </a>
             </div>
             <div class="card-wrapper bg-img-base back" style="background-image: url(images/Trai_1.webp)">
