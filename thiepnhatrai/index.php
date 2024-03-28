@@ -65,7 +65,7 @@ if(isset($_GET['code'])){
         </div>
         
       </div>
-      <div class="link-wedding"><a href="https://huytam.love">Hãy ấn vào đây để xem thêm thông tin</a></div>
+      <div class="link-wedding"></div>
     </div>
 </body>
 <script>
@@ -77,5 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementsByClassName('close')[0].addEventListener('click', function () {
     document.getElementsByClassName('card-packaging')[0].classList.remove('is-open')
   })
-});</script>
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const openButton = document.querySelector('.open-main');
+    const linkWeddingDiv = document.querySelector('.link-wedding');
+
+    openButton.addEventListener('click', function () {
+        const link = document.createElement('a');
+        link.textContent = 'Hãy ấn vào đây để xem thêm thông tin';
+        link.href = 'https://huytam.love'; // Đặt href tại đây
+
+        linkWeddingDiv.appendChild(link);
+    });
+});  
+
+</script>
 </html>
