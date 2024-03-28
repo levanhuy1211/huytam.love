@@ -81,15 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function () {
     const openButton = document.querySelector('.open-main');
     const linkWeddingDiv = document.querySelector('.link-wedding');
+    let isLinkAdded = false; // Biến để kiểm tra xem liên kết đã được thêm vào hay chưa
 
     openButton.addEventListener('click', function () {
-        const link = document.createElement('a');
-        link.textContent = 'Hãy ấn vào đây để xem thêm thông tin';
-        link.href = 'https://huytam.love'; // Đặt href tại đây
+        if (!isLinkAdded) { // Kiểm tra xem liên kết đã được thêm vào chưa
+            const link = document.createElement('a');
+            link.textContent = 'Hãy ấn vào đây để xem thêm thông tin';
+            link.href = 'https://huytam.love';
 
-        linkWeddingDiv.appendChild(link);
+            linkWeddingDiv.appendChild(link);
+            isLinkAdded = true; // Đặt cờ là true để biết rằng liên kết đã được thêm vào
+        }
     });
-});  
+});
+
 
 </script>
 </html>
