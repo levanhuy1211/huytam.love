@@ -39,19 +39,19 @@ if(isset($_GET['code'])){
 <body>
 <div class="page-wrapper">
       <div class="card">
-        <div class="card-packaging bg-img-base" style="background-image: url(images/Trai_2.png)">
+        <div class="card-packaging bg-img-base" style="background-image: url(images/Trai_2.webp)">
           <div class="card-center">
-            <a class="close bg-img-base" href="#" style="background-image: url(https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/close-circle-512.png)"></a>
+            <a class="close bg-img-base" href="#" style="background-image: url(https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/close-circle-512.webp)"></a>
           </div>
           <div class="card--first">
-            <div class="card-wrapper bg-img-base front" style="background-image: url(images/bia.jpg)">
+            <div class="card-wrapper bg-img-base front" style="background-image: url(images/bia.webp)">
               <div class="card-name"><?php echo $name;?></div>
               <a class="open" href="#">
                 <div class="open-tail"></div>
                 <div class="open-main"><span class="open-title">Open</span></div>
               </a>
             </div>
-            <div class="card-wrapper bg-img-base back" style="background-image: url(images/Trai_1.png)">
+            <div class="card-wrapper bg-img-base back" style="background-image: url(images/Trai_1.webp)">
               <div class="card-in-name">
                 <span><?php echo $name;?></span>
               </div>
